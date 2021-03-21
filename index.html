@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCL THEME</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(#0c2a54, #05722a);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .button-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button-box button {
+            text-transform: uppercase;
+            margin: 10px 0px 10px 0px;
+            border-radius: 3px;
+            padding: 6px 14px;
+            transition: all .3s;
+            width: 300px;
+        }
+
+        .button-box button:active,
+        .button-box button:focus {
+            outline: none;
+        }
+
+        #btn-1 {
+            background-color: #de5246;
+            color: white;
+            border: 1px solid #de5246;
+        }
+
+        #btn-1:hover {
+            background-color: transparent;
+            color: #de5246;
+        }
+
+        #btn-2 {
+            background-color: #5cb85c;
+            color: white;
+            border: 1px solid #5cb85c;
+        }
+
+        #btn-2:hover {
+            background-color: transparent;
+            color: #5cb85c;
+        }
+
+        #btn-3 {
+            background-color: #337ab7;
+            color: white;
+            border: 1px solid #337ab7;
+        }
+
+        #btn-3:hover {
+            background-color: transparent;
+            color: #337ab7;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="https://csrbox.org/company/cmp_logo/1508829922MCL-logo.jpg" alt=""
+        style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0%); width: 220px; border-radius: 0 30px 0 30px;">
+    <div class="button-box">
+        <button id="btn-1">top to bottom</button>
+        <button id="btn-2">left to right</button>
+        <button id="btn-3">top left to bottom right</button>
+    </div>
+    <script>
+        $("#btn-2").click(() => {
+            $("body").css("background-image", "linear-gradient(to right, #0c2a54 , #05722a)")
+        })
+
+        $("#btn-3").click(() => {
+            $("body").css("background-image", "linear-gradient(to bottom right, #0c2a54 , #05722a)")
+        })
+        $("#btn-1").click(() => {
+            $("body").css("background-image", "linear-gradient(#0c2a54 , #05722a)")
+        })
+    </script>
+</body>
+
+</html>
