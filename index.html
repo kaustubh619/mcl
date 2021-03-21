@@ -78,6 +78,30 @@
             background-color: transparent;
             color: #337ab7;
         }
+
+        .hand-icon {
+            width: 35px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, 0%);
+            animation: icon-anime 1.5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes icon-anime {
+            0% {
+                top: 50%;
+            }
+
+            50% {
+                top: 70%;
+            }
+
+            100% {
+                top: 50%;
+            }
+        }
     </style>
 </head>
 
@@ -86,7 +110,11 @@
         style="position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0%); width: 220px; border-radius: 0 30px 0 30px;">
     <div class="button-box">
         <button id="btn-1">top to bottom</button>
-        <button id="btn-2">left to right</button>
+        <div style="position: relative;">
+            <button id="btn-2">left to right</button>
+            <img src="https://cdn.iconscout.com/icon/free/png-256/hand-finger-pointing-up-sky-thumb-handsup-2-12574.png"
+                alt="" style="" class="hand-icon">
+        </div>
         <button id="btn-3">top left to bottom right</button>
     </div>
     <script>
